@@ -14,7 +14,7 @@
         ReactDOM.render(
             <h1>
             <?php
-    echo "rrrrrrr";
+    echo "gggg";
             ?>          
             </h1>,
             document.body

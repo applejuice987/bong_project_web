@@ -14,7 +14,10 @@
         ReactDOM.render(
             <h1>
             <?php
+
         echo "2";
+        echo "1";
+
             ?>          
             </h1>,
             document.body

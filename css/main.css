@@ -1,0 +1,24 @@
+
+a{
+    color:white;
+    text-decoration:none;
+    font-family:'Noto Sans KR', sans-serif;
+}
+.header_wrap{
+    
+    margin: 0 auto;
+    padding: 0 10% 10% 0;
+    background-color:navy;
+}
+.block_img{
+    height:50%;
+    width: 50%;
+    margin: auto;
+    display: block;
+    
+}
+.gnb{
+    float: right;
+    line-height: 4;
+}
+

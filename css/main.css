@@ -1,24 +1,39 @@
 
-a{
-    color:white;
-    text-decoration:none;
-    font-family:'Noto Sans KR', sans-serif;
-}
-.header_wrap{
-    
-    margin: 0 auto;
-    padding: 0 10% 10% 0;
-    background-color:navy;
-}
 .block_img{
     height:50%;
     width: 50%;
     margin: auto;
     display: block;
+}
+
+
+  
+header{
+    height: 200px;
+    color: white;
+    /* background: url(../image/sub_visual_board.jpg); */
+    background-color: navy;
+}
+.logo{
+    /* margin-left:500px; */
+   
+    margin-left: 35%; 
+    margin-top:2%;
+    color:#FF640A;
+    
     
 }
-.gnb{
-    float: right;
-    line-height: 4;
+
+header .header_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
 }
+header .gnb{float: right;line-height: 4;}
+header .gnb a{
+
+    color: white;
+
+}
+
 

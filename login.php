@@ -9,6 +9,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <link rel="stylesheet" href = "css/login.css"> 
     <link rel="stylesheet" href = "css/default.css">
+    <script langueage="javaScript">
+        function login_check() {
+            if (!document.login.password.value) {
+                alert("패스워드를 입력하세요!");
+                document.login.password.focus();
+                return;
+                }
+            document.login.submit();
+ }
+    </script>
 </head>
 <body>
     

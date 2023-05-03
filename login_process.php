@@ -4,6 +4,7 @@ $passwd = $_POST["password"];
 if($passwd =="1234")
 {
     session_start();
+    $_SESSION['logined']="TRUE";
     echo"<script>location.href = 'adminpage.php'</script>";
 }
 else

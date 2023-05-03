@@ -12,7 +12,7 @@ header{
     height: 200px;
     color: white;
     /* background: url(../image/sub_visual_board.jpg); */
-    background-color: black;
+    background-color: navy;
 }
 nav{
 
@@ -20,7 +20,7 @@ nav{
     height: 68px;
     margin: 130px auto;
     text-align: center;
-    background-color:navy;
+    background-color:black;
     line-height: 68px;
 
 }

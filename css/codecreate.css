@@ -1,0 +1,8 @@
+.menu{position: absolute;top: 355px;height: 850px;left: 50px;padding: 60px 50px 0 0;}
+.menu h2{padding: 0px 0px 20px 0;margin: 0px 0px 40px 0;border-bottom: 2px solid #000;text-align: center;}
+.menu li{height: 65px; margin: 0 0px 0px 20px;}
+.menu .border-right{border-right:1px solid #acacac;height: 1015px;width: 250px;position: absolute; z-index: -999; top: 0px;}
+.active{margin: 0 0px 0px 10px !important;}
+.active a{background-color: #0c82e9;color: white;padding: 13px 14px 14px 10px;}
+form{position:absolute;left: 50%; top: 600px;transform: translateX(-50%);}
+form input:last-child{height: 35px;width: 60px;line-height: 35px;text-align: center;font-weight: 700;background-color: #0f59a5;color: #fff;padding: 0;font-size: 18px;border-radius: 3px;border: none;outline: none;}

@@ -1,0 +1,55 @@
+.container{
+    width: 1200px;
+    margin:  0 auto;
+}
+
+
+/* header */
+header{    
+    height: 355px;
+    color: white;
+    background: url(../image/sub_visual_board.jpg);
+}
+header .logo img{width: 200px;}
+header .header_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+header .gnb{float: right;line-height: 4;}
+header .gnb a{
+    color: white;
+}
+header nav{
+    width: 390px;
+    height: 68px;
+    margin: 202px auto;
+    text-align: center;
+    background: url(../image/lnb.jpg);
+    line-height: 68px;
+}
+
+/* section */
+section{height: 850px;}
+section h1{margin: 84px 0 108px 0 ; text-align: center;font-size: 4.8rem;}
+section table{width: 750px; margin: 0 auto;}
+section tbody {line-height: 4; text-align: center;}
+section tbody tr{border-bottom: 1px solid #ccc;}
+section tbody .list-head{height: 59px; background: #112d6c;color: white;}
+section form{text-align: center;margin: 50px 0px 0 0;}
+section form input{margin: 0px 15px 0 0;}
+section form img {width: 25px;}
+section .page-navi{display: flex; justify-content: space-evenly;width: 750px;margin: 30px auto;}
+section .page-navi .page-prev span{margin: 0px 25px 0 0;}
+section .page-navi .page-next a{margin: 0px 25px 0 0;}
+section .page-navi .page-number span{margin: 0px 15px 0 0;}
+section .page-navi .page-prev span{margin: 0px 25px 0 0;}
+
+
+/* footer */
+footer{background: #222;height: 170px;}
+footer .footer-inner{width: 1200px; margin: 0px auto;}
+footer .footer-inner h2{float: left;margin: 40px 100px 0px 50px;}
+footer .footer-inner img{width: 200px;}
+footer .footer-inner .address{padding: 40px 0 0 0;color: #787878;}
+

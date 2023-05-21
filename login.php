@@ -14,7 +14,7 @@
                 return;
                 }
             document.login.submit();
- }
+        }
     </script>
 </head>
 <body>

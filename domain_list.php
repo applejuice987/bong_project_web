@@ -5,21 +5,13 @@
 
 $dbcon = new mysqli("localhost","bong","1234","project");     
 
-$sql = "select count(*) from ip_table where is_malicious = 'T'";
+$sql = "select count(*) from domain_table";
 
 $result = mysqli_query($dbcon, $sql);
 
 $array = mysqli_fetch_array($result);
 
 $num = $array[0];
-
-        
-        
-
-
-
-
-
 
 /* paging : 한 페이지 당 데이터 개수 */
 $list_num = 5;
@@ -60,7 +52,7 @@ $start = ($page - 1) * $list_num;
 $dbcon = new mysqli("localhost","bong","1234","project");
 
 /* paging : 쿼리 작성 - limit 몇번부터, 몇개 */
-$sql = "select * from ip_table where is_malicious = 'T' limit $start, $list_num;";
+$sql = "select * from domain_table limit $start, $list_num;";
 
 /* paging : 쿼리 전송 */
 $result = mysqli_query($dbcon, $sql);
@@ -76,19 +68,16 @@ $cnt = $start + 1;
     </head>
     <body>
         <h1>
-            접근 시도하였던 유해 ip리스트
+            차단 도메인 목록
         </h1>
 
         <table width=300 cellpadding=1 cellspacing=0>
 
         <tr class="list-head">
             <td><b>번호</b></td>
+            <td><b>도메인</b></td>
             <td><b>시간</b></td>
-            <td><b>IP address</b></td>
-            <td><b>is_malicious</b></td>
-            <td><b>is_vpn</b></td>
-            <td><b>can_remote_access</b></td>
-            <td colspan="6" height="1"></td>
+            <td colspan="3" height="1"></td>
         </tr>
         <?php
 
@@ -98,11 +87,9 @@ $cnt = $start + 1;
         <tr class="brd">
             <!-- <td><?php echo $i; ?></td> -->
             <td><?php echo $cnt; ?></td>
+            <td><?php echo $array["domain_str"]; ?></td>
             <td><?php echo $array["time"]; ?></td>
-            <td><?php echo $array["ip_str"]; ?></td>
-            <td><?php echo $array["is_malicious"]; ?></td>
-            <td><?php echo $array["is_vpn"]; ?></td>
-            <td><?php echo $array["can_remote_access"]; ?></td>
+            
         </tr>
 
         <?php  
@@ -118,8 +105,8 @@ $cnt = $start + 1;
         /* paging : 이전 페이지 */
         if($page > 1){
     ?>
-        <a href="adminpage.php?forward=0&page=1">처음</a>
-        <a href="adminpage.php?forward=0&page=<?php echo ($page-1); ?>">이전</a>
+        <a href="adminpage.php?forward=1&page=1">처음</a>
+        <a href="adminpage.php?forward=1&page=<?php echo ($page-1); ?>">이전</a>
         <?php } else{ ?>
             <a>처음</a><a>이전</a>
         <?php }; ?>
@@ -132,7 +119,7 @@ $cnt = $start + 1;
 
     ?>
     
-    <a href="adminpage.php?forward=0&page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
+    <a href="adminpage.php?forward=1&page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
     <?php };?>
         </div>
         <div class = "page-next">
@@ -141,8 +128,8 @@ $cnt = $start + 1;
     /* paging : 다음 페이지 */
     if($page < $total_page){
     ?>
-    <a href="adminpage.php?forward=0&page=<?php echo $page+1; ?>">다음</a>
-    <a href='adminpage.php?forward=0&page=<?php echo $total_page; ?>'>마지막</a>
+    <a href="adminpage.php?forward=1&page=<?php echo $page+1; ?>">다음</a>
+    <a href='adminpage.php?forward=1&page=<?php echo $total_page; ?>'>마지막</a>
     <?php } else{ ?>
         <a>다음</a><a>마지막</a>
     <?php };?>
